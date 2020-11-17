@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /**
  * @Classname Bag
- * @Description TODO
+ * @Description 直接使用Stack的代码改一下名称即可
  * @Date 2020/10/29 9:20
  * @Created by laohuang
  */

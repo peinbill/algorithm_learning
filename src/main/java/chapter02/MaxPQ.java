@@ -1,10 +1,9 @@
 package chapter02;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 /**
  * @Classname MaxPQ
- * @Description TODO
+ * @Description 最大优先队列
  * @Date 2020/11/2 20:15
  * @Created by laohuang
  */

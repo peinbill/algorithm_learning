@@ -1,19 +1,22 @@
 package chapter02;
 
 /**
- * @Classname IndexMaxPQ
- * @Description 索引优先队列
- * @Date 2020/11/2 21:06
+ * @Classname IndexMinPQ
+ * @Description TODO
+ * @Date 2020/11/15 16:35
  * @Created by laohuang
  */
-public class IndexMaxPQ<Key extends Comparable<Key>>{
+public class IndexMinPQ<Key extends Comparable<Key>> {
+
     private int maxN;
     private int n;
     private int[] pq;
     private int[] qp;
     private Key[] keys;
 
-    public IndexMaxPQ(int maxN){
+
+
+    public IndexMinPQ(int maxN){
         this.maxN = maxN;
         n = 0;
         keys = (Key[]) new Object[maxN+1];
@@ -23,6 +26,12 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
             qp[i] = -1;
         }
     }
+    public void change(int i, Key key) {
+        changeKey(i, key);
+    }
+    private boolean greater(int i, int j) {
+        return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
+    }
 
     private void validateIndex(int i) {
         if (i < 0) throw new IllegalArgumentException("index is negative: " + i);
@@ -30,7 +39,7 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
     }
 
     private void swim(int k) {
-        while (k > 1 && less(k/2, k)) {
+        while (k > 1 && greater(k/2, k)) {
             exch(k, k/2);
             k = k/2;
         }
@@ -39,8 +48,8 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
     private void sink(int k) {
         while (2*k <= n) {
             int j = 2*k;
-            if (j < n && less(j, j+1)) j++;
-            if (!less(k, j)) break;
+            if (j < n && greater(j, j+1)) j++;
+            if (!greater(k, j)) break;
             exch(k, j);
             k = j;
         }
@@ -83,21 +92,21 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
         swim(n);
     }
 
-    public int maxIndex(){
+    public int minIndex(){
         if(n==0){
             throw new IllegalArgumentException("Priority queue underflow");
         }
         return pq[1];
     }
 
-    public Key maxKey(){
+    public Key minKey(){
         if(n==0){
             throw new IllegalArgumentException("Priority queue underflow");
         }
         return keys[pq[1]];
     }
 
-    public int dexMax(){
+    public int delMin(){
         if(n==0){
             throw new IllegalArgumentException("Priority queue underflow");
         }
@@ -138,7 +147,7 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
             throw new IllegalArgumentException("Calling increaseKey() with a key that is strictly less than the key in the priority queue");
 
         keys[i] = key;
-        swim(qp[i]);
+        sink(qp[i]);
     }
 
     public void decreaseKey(int i, Key key) {
@@ -149,7 +158,7 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
         if (keys[i].compareTo(key) < 0)
             throw new IllegalArgumentException("Calling decreaseKey() with a key that is strictly greater than the key in the priority queue");
         keys[i] = key;
-        sink(qp[i]);
+        swim(qp[i]);
     }
 
     public void delete(int i) {
@@ -162,5 +171,4 @@ public class IndexMaxPQ<Key extends Comparable<Key>>{
         keys[i] = null;
         qp[i] = -1;
     }
-
 }

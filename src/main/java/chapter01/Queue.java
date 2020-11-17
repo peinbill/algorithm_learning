@@ -20,11 +20,11 @@ public class Queue<Item> implements Iterable<Item>{
         Node next;
     }
 
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return N==0;
     }
 
-    private int size(){
+    public int size(){
         return N;
     }
 
