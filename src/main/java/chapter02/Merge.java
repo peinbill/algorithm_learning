@@ -67,7 +67,7 @@ public class Merge extends Example{
                 // 此时右边的已经全部排完了
                 a[k] = aux[i++];
             }else if(less(aux[j],aux[i])){
-                a[k] = aux[j];
+                a[k] = aux[j++];
             }else {
                 a[k] = aux[i++];
             }
