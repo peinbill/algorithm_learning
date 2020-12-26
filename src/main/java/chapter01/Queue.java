@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /**
  * @Classname Queue
- * @Description 列表实现——基于链表
+ * @Description 列表实现——基于链表——用两个指针进行计算
  * @Date 2020/10/29 9:05
  * @Created by laohuang
  */

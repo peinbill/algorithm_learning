@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * @Classname UF
- * @Description 使用quick-find算法
+ * @Description 使用quick-find算法，find为O(1),union为O(n)
  * @Date 2020/10/29 9:56
  * @Created by laohuang
  */

@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 /**
  * @Classname BinarySearch
- * @Description TODO
+ * @Description 二分查找——用于java的入门
  * @Date 2020/10/19 21:44
  * @Created by laohuang
  */

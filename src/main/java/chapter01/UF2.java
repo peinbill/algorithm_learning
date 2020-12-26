@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * @Classname UF2
- * @Description quick-union方法
+ * @Description quick-union方法,每次union，只需改变源头即可
  * @Date 2020/10/29 10:22
  * @Created by laohuang
  */

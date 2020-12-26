@@ -2,7 +2,7 @@ package chapter01;
 
 /**
  * @Classname WeightQuickUnionUF
- * @Description TODO
+ * @Description 跟UF2比起来，规定小树拼接到大数上，sz也是只需更新源头即可
  * @Date 2020/10/29 10:36
  * @Created by laohuang
  */
