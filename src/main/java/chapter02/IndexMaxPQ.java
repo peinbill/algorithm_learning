@@ -3,6 +3,9 @@ package chapter02;
 /**
  * @Classname IndexMaxPQ
  * @Description 索引优先队列
+ * pq:索引值，存储优先队列，优先队列—> 值
+ * qp:反向索引，存储值—> 优先队列
+ * keys: 值，存储本身值的列表
  * @Date 2020/11/2 21:06
  * @Created by laohuang
  */

@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdRandom;
 
 /**
  * @Classname Quick3way
- * @Description TODO
+ * @Description 快排的三向切分——用于有大量重复元素的时候
  * @Date 2020/11/2 16:21
  * @Created by laohuang
  */

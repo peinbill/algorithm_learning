@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /**
  * @Classname MinPQ
- * @Description TODO
+ * @Description 最小优先队列——堆实现（与最大优先队列相比，仅仅把less变成greater）
  * @Date 2020/11/15 10:05
  * @Created by laohuang
  */

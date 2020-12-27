@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdRandom;
 
 /**
  * @Classname Quick
- * @Description TODO
+ * @Description 快排——经典十大算法之一（面试重点）——记住，交换的是右边
  * @Date 2020/10/30 16:09
  * @Created by laohuang
  */

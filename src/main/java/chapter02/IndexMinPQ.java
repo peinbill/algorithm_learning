@@ -2,7 +2,7 @@ package chapter02;
 
 /**
  * @Classname IndexMinPQ
- * @Description TODO
+ * @Description 索引优先队列——把less变成greater
  * @Date 2020/11/15 16:35
  * @Created by laohuang
  */
@@ -26,9 +26,11 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
             qp[i] = -1;
         }
     }
+
     public void change(int i, Key key) {
         changeKey(i, key);
     }
+
     private boolean greater(int i, int j) {
         return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
     }

@@ -2,7 +2,7 @@ package chapter02;
 
 /**
  * @Classname Selection
- * @Description 选择排序：每次选择最小的元素
+ * @Description 选择排序：每次选择最小的元素——最简单，最无脑的排序方式
  * @Date 2020/10/30 15:30
  * @Created by laohuang
  */

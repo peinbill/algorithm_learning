@@ -6,7 +6,7 @@ import java.awt.*;
 
 /**
  * @Classname SortCompare
- * @Description TODO
+ * @Description 用来计算排序算法的时间
  * @Date 2020/10/30 16:06
  * @Created by laohuang
  */

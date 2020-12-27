@@ -3,7 +3,9 @@ package chapter02;
 
 /**
  * @Classname MaxPQ
- * @Description 最大优先队列
+ * @Description 最大优先队列——堆实现。
+ * 优先队列：有插入和删除最大元素的抽象数组类型
+ * 堆：每个结点都大于等于子结点的具体数组结构
  * @Date 2020/11/2 20:15
  * @Created by laohuang
  */
@@ -63,7 +65,7 @@ public class MaxPQ<Key extends Comparable<Key>>{
     public Key deleteMax(){
         Key max = pq[1];
         exch(1,N--);
-        pq[N+1] = null;
+        pq[N+1] = null;// 使其对象游离
         sink(1);
         return max;
 

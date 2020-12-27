@@ -4,7 +4,7 @@ import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 /**
  * @Classname Merge
- * @Description 归并排序
+ * @Description 归并排序——面试的终点，要求熟练掌握
  * @Date 2020/10/30 16:08
  * @Created by laohuang
  */

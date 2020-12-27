@@ -2,7 +2,7 @@ package chapter02;
 
 /**
  * @Classname Shell
- * @Description 希尔排序：插入排序的进化
+ * @Description 希尔排序：插入排序的进化。理解为将插入排序的代码中移动的元素距离由1改成h即可——权衡了子数组的规模和有序性
  * @Date 2020/10/30 16:08
  * @Created by laohuang
  */
@@ -14,7 +14,7 @@ public class Shell extends Example{
 
         // 先选取h的最大值
         while (h<N/3){
-            h = 3*h+1;
+            h = 3*h+1;//+1是为了保证最后一次的/3=1
         }
 
         while (h>=1){
